@@ -1,19 +1,7 @@
 # Go Virus, Go!
-A OSPP 2021 project
+Final project for the OSPP course at Uppsala University
 
-## Group Clockwork
-Team members:
-Alexander Sabelström
-Aljaz Kovac
-Johan Apelgren
-Marcus Jansson
-Marion Wallsten
-Måns Rönnberg
-Pontus Ljungren
-Victoria Täng
-
-
-# How to run:
+## How to run:
 Pull repo
 Option 1:
 Go to /src/ directory in terminal
@@ -24,7 +12,7 @@ Write 'go build'
 Run the generated executable, found in same directory.
 
 
-# How to use tests
+## How to use tests
 Navigate to correct folder -> clockwork\src\backend
 In terminal write: go test
 If you want to see coverage write: go test -coverage
