@@ -1,3 +1,5 @@
+![pandemic-sim](pandemic-4.png)
+
 # Go Virus, Go!
 This is a fun pandemic simulator that lets you determine the conditions under which the pandemic will run. You can change the infection rate, the number of people present, and many other factors, and observe the effects. 
 
