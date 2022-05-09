@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Insert this line above script imports  -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+  <script src="messages.js"></script>
+  <script src="sketch.js"></script>
+  <script src="main.js"></script>
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+  <meta charset="UTF-8">
+
+</head>
+<div id="welcome-holder">
+  <div id="welcome-content"></div>
+  <button id="next" onClick="showInstructions()"></button>
+  <button id="close" onclick="closeWelcome()"></button>
+  </div>
+<body style="background-color:lightGrey">
+  <div id="dropdowns">
+    <div class="dropdown">
+      <button onclick="toggleSettings('popDrop')" class="dropbtn" id="population">Population</button>
+      <div id="popDrop" class="dropdown-content">
+        <form>
+          <label for="Number of Locations">Number of locations</label><br>
+          <input type="text" id="numberOfLocations" name="numberOfLocations" value="25"><br>
+          <label for="Number of Persons">Number of persons</label><br>
+          <input type="text" id="numberOfPersons" name="numberOfPersons" value="1000"><br>
+          <label for="Simulation length">Simulation length</label><br>
+          <input type="text" id="simulationLimit" name="simulationLimit" value="40">
+        </form>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="toggleSettings('virDrop')" class="dropbtn" id="virus">Virus</button>
+      <div id="virDrop" class="dropdown-content">
+        <form>
+          <label for="Infection risk">Infection risk on spawn</label><br>
+          <input type="text" id="spawnInfectionRisk" name="spawnInfectionRisk" value="0.01">
+          <label for="Spread risk">Spread Risk</label><br>
+          <input type="text" id="spreadRisk" name="spreadRisk" value="0.1">
+        </form>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="toggleSettings('proDrop')" class="dropbtn" id="protection">Protection</button>
+      <div id="proDrop" class="dropdown-content">
+        <form>
+          <label for="maskUsage">Mask Usage</label><br>
+          <input type="text" id="maskUsage" name="maskUsage" value="0.2">
+          <label for="maskEffectiveness">Mask Effectiveness</label><br>
+          <input type="text" id="maskEffectiveness" name="maskEffectiveness" value="0.7">
+          <br>
+          <label for="vaccineUsage">Vaccine Usage</label><br>
+          <input type="text" id="vaccineUsage" name="vaccineUsage" value="0.2">
+          <label for="vaccineEffectiveness">Vaccine Effectiveness</label><br>
+          <input type="text" id="vaccineEffectiveness" name="vaccineEffectiveness" value="0.9">
+        </form>
+      </div>
+    </div>
+
+    <button type="button" class="btn" id="Apply">
+      Apply
+    </button>
+
+    <button type="button" class="btn" id="Run">
+      Run
+    </button>
+
+    <button type="button" id="stats1" class="statsButton" onclick="SetStatWindow(0)">
+      Show Total Infected
+    </button>
+    <button type="button" id="stats2" class="statsButton" onclick="SetStatWindow(1)">
+      Show Newly Infected
+    </button>
+    <button type="button" id="stats3" class="statsButton" onclick="SetStatWindow(2)">
+      Show Overall Stats
+    </button>
+    
+    <button type="button" id="help" onclick="welcomeUser()">
+      Help
+    </button>
+  </div>
+</body>
+</html>
