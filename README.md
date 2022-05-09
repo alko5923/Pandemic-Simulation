@@ -3,6 +3,8 @@
 # Go Virus, Go!
 This is a fun pandemic simulator that lets you determine the conditions under which the pandemic will run. You can change the infection rate, the number of people present, and many other factors, and observe the effects. 
 
+![population](pandemic-1.png)
+
 ## How to run:
 Pull repo
 Option 1:
